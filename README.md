@@ -7,7 +7,7 @@ TeamCity does however have a rich set of REST commands that you can use to craft
 When added as a build step, this powershell script uses the TeamCity REST api to grab the lit of changes associated with the running build and then parse through the list to find Jira ticket numbers embedded in the comments. The ticket numbers are then converted into individual TeamCity tags
 
 To use this script, you will first need to edit the script and replace <b>USER</b> and <b>PASSWORD</b> with credentials to login to TeamCity.<p>
-Then, place the file on your agent machine in c:\temp. You can put it anywhere you want really, but you will have to make adjustments in the next step.<p>
+  Then, place the file on your agent machine in <b>c:\temp</b>. You can put it anywhere you want really, but you will have to make adjustments in the next step.<p>
 Lastly, you will need to create a Powershell build step in your config. In the "Script file" box, point it to the lcoation of the script on the agent machine - relative to the checkout directory. Then Expand the Script arguments section and add: <b>%teamcity.build.id%</b> and <b>%teamcity.serverUrl%</b><p>
-Save the step nd run your build!
+Save the step and run your build!
 
