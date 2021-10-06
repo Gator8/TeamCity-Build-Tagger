@@ -8,5 +8,6 @@ When added as a build step, this powershell script uses the TeamCity REST api to
 
 To use this script, you will first need to edit the script and replace <b>USER</b> and <b>PASSWORD</b> with credentials to login to TeamCity.<p>
 Then, place the file on your agent machine in c:\temp. You can put it anywhere you want really, but you will have to make adjustments in the next step.<p>
-Lastly, you will need to create a Powershell build step in your config. In the "Script file" box, point it to the lcoation of the script on the agent machine - relative to the checkout directory. Then Expand the Script arguments section and add: <b>%teamcity.build.id%</b> and <b>%teamcity.serverUrl%</b>
+Lastly, you will need to create a Powershell build step in your config. In the "Script file" box, point it to the lcoation of the script on the agent machine - relative to the checkout directory. Then Expand the Script arguments section and add: <b>%teamcity.build.id%</b> and <b>%teamcity.serverUrl%</b><p>
+Save the step nd run your build!
 
